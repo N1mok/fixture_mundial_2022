@@ -1,7 +1,7 @@
 import csv
 
 # Nombre del archivo
-archivo_nombre = 'd:/C/Respaldo de Laura/UTN/organizacion empresarial/tp 2 oe/fixture_qatar_2022_resultados.csv'
+archivo_nombre = '/content/fixture_mundial_2022/datos/fixture_qatar_2022_resultados.csv'
 
 try:
     with open(archivo_nombre, mode='r', encoding='utf-8') as archivo:
