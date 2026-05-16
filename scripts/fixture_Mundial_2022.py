@@ -1,7 +1,13 @@
 import csv
+from pathlib import Path
 
-# Nombre del archivo
-archivo_nombre = '/content/fixture_mundial_2022/datos/fixture_qatar_2022_resultados.csv'
+# 1. Obtenemos la ruta de la carpeta donde está este script (.py)
+DIRECTORIO_ACTUAL = Path(__file__).resolve().parent
+
+# 2. Construimos la ruta relativa hacia el archivo CSV
+# Subimos un nivel (..) y entramos a 'datos/fixture_qatar_2022_resultados.csv'
+archivo_nombre = DIRECTORIO_ACTUAL.parent / 'datos' / 'fixture_qatar_2022_resultados.csv'
+
 
 try:
     with open(archivo_nombre, mode='r', encoding='utf-8') as archivo:
